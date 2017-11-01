@@ -1,0 +1,42 @@
+README
+=======
+1: Compiler le projet
+$ make
+
+2: Créer un model DiVinE sous CORDA
+$ generateur N K output C o n f i g
+
+avec 	N la taille de l'anneau
+	K le nombre de robots
+	output le nom du fichier en sortie (sans son extension)
+	C o n f i g  	la configuration initiale des robots dans l'anneau 
+Pour avoir un modèle SYm : rajouter l'option -s suivi de 
+	FULL pour avoir un modèle SYm Fully-synchrone
+	SEMI pour avoir un modèle SYm Semi-synchrone
+
+3: Vérifier le modèle avec DiVinE
+	3.1: En ligne de commande
+		combiner le modèle avec les propriétés voulu (dossier LTL)
+			le fichier obtenu est model.prop1.dve
+		$ divine combine model.dve -f propriétés.ltl
+		
+		vérifier le résultat (avec option -d pour avoir le contre exemple) *
+		$ divine verify model.prop1.dve
+	 
+		obtenir des mesures sur le modèle généré
+		$ divine -r metrics model.dve
+
+	
+	3.2: Avec l'outil graphique divine.ide (présent dans le dossier divine-2.X/_build/gui/)
+	beaucoup plus lent qu'en ligne de commande
+		combiner le modèle 
+			Tools  combine
+		vérification *
+			Tools  verify LTL
+		obtenir des mesures
+			Tools metrics
+
+
+
+
+* le modèle est vérifier si divine répond " no cycle found"

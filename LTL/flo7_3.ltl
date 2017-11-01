@@ -1,0 +1,1 @@
+!(G(("P_Env.trans_step" || "P_Env.step")) && (G ((F ("P_Rbt1.observe")) && (F ("P_Rbt1.plus" || "P_Rbt1.moins" || "P_Rbt1.stop")) && (F ("P_Rbt2.observe")) && (F ("P_Rbt2.plus" || "P_Rbt2.moins" || "P_Rbt2.stop")) && (F ("P_Rbt3.observe")) && (F ("P_Rbt3.plus" || "P_Rbt3.moins" || "P_Rbt3.stop")) ) -> FG (("P_Rbt1.observe" || "P_Rbt1.stop") ) ))
